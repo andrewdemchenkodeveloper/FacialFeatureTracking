@@ -1,0 +1,13 @@
+version: "2"
+services:
+  python:
+     image: bamos/openface
+     volumes:
+     - "./:/code"
+     devices:
+     - /dev/video0:/dev/video0
+     working_dir: 
+         "/code"
+     command: /bin/bash -c "python LandmarksDetector.py; chmod 777 ./"
+
+
